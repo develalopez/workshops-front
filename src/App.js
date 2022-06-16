@@ -19,6 +19,9 @@ import {
 
 const App = ({ workshopsData, researchGroupsData, usersData }) => {
 
+  /**
+   * Generacion de datos con base en mockups en ./index.js
+   */
   const [workshops, setWorkshops] = useState(workshopsData)
   const [researchGroups, setResearchGroups] = useState(researchGroupsData)
   const [users, setUsers] = useState(usersData)
@@ -28,6 +31,13 @@ const App = ({ workshopsData, researchGroupsData, usersData }) => {
     padding: 5
   }
 
+  /**
+   * Funcion que gestiona el inicio de sesion. Define el usuario activo con base al
+   * usuario y password recibidos. Si el usuario no existe o el password es
+   * incorrecto, se arroja un error,
+   * Recibe el objeto de usuario del handler del formulario de inicio de sesion
+   * (./components/Login.js) 
+   */
   const login = (user) => {
     const tryingUser = users.find(validUser => validUser.email === user.email)
     if (!tryingUser) {
@@ -40,10 +50,16 @@ const App = ({ workshopsData, researchGroupsData, usersData }) => {
     }
   }
 
+  /**
+   * Funcion que gestiona el registro de usuarios. Agrega el nuevo usuario a
+   * la lista de usuarios o indica si el correo electronico usado ya esta registrado.
+   * Recibe el objeto de usuario del handler del formulario de registro
+   * (./components/Register.js) 
+   */
   const register = (user) => {
     const registeringUser = users.find(validUser => validUser.username === user.username)
     if (registeringUser) {
-      alert("Nombre de usuario ya existe")
+      alert("Correo electrónico ya existe")
     } else {
       user.id = users.length + 1
       setUsers(users.concat(user))
@@ -52,6 +68,10 @@ const App = ({ workshopsData, researchGroupsData, usersData }) => {
   }
 
   return (
+    /**
+     * La primera parte del Router construye los enlaces al tope de la pagina.
+     * La segunda parte del Router muestra el componente correcto en funcion del enlace clickeado.
+     */
     <Router>
       <div>
         <Link style={padding} to="/">Inicio</Link>

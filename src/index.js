@@ -86,6 +86,10 @@ let users = [
   }
 ]
 
+/**
+ * Funcion que renderiza toda la aplicacion. Envia los datos quemados mas arriba para
+ * su generacion y uso.
+ */
 ReactDOM.createRoot(document.getElementById('root')).render(
   <App workshopsData={workshops} researchGroupsData={researchGroups} usersData={users} />
 )

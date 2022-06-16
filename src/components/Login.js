@@ -1,6 +1,16 @@
 import React from 'react'
 
+/**
+ * Componente de inicio de sesion de la aplicacion.
+ */
 const Login = ({ onLogin, error }) => {
+
+    /**
+     * Funcion que se ejecuta al presionar el boton de inicio de sesion.
+     * Construye al usuario con todas sus caracteristicas con base en la 
+     * informacion del formulario y llama a la funcion login() que esta
+     * disponible en ../App.js
+     */
     const onSubmit = (event) => {
         const user = {
             email: event.target.email.value,

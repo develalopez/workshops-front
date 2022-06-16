@@ -1,6 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+/**
+ * Componente de la pagina de registro de la aplicacion.
+ */
 const Register = ({ workshops, onRegister }) => {
 
     const roles = [
@@ -18,6 +21,12 @@ const Register = ({ workshops, onRegister }) => {
         }
     ]
 
+    /**
+     * Funcion que se ejecuta al momento de hacer click en el boton de registro.
+     * Construye al usuario con todas sus caracteristicas con base en la 
+     * informacion del formulario y llama a la funcion register() que esta
+     * disponible en ../App.js
+     */
     const onSubmit = (event) => {
         const user = {
             email: event.target.email.value,
@@ -30,6 +39,9 @@ const Register = ({ workshops, onRegister }) => {
         onRegister(user)
     }
 
+    /**
+     * Formulario de registro de usuarios.
+     */
     return (
         <div>
             <form onSubmit={onSubmit}>

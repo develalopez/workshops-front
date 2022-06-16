@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * Componente del perfil de estudiantes.
+ */
 const StudentProfile = ({ user }) => {
     return (
         <div>
@@ -9,6 +12,9 @@ const StudentProfile = ({ user }) => {
     )
 }
 
+/**
+ * Componente del perfil de tutores.
+ */
 const TeacherProfile = ({ user }) => {
     return (
         <div>
@@ -18,6 +24,9 @@ const TeacherProfile = ({ user }) => {
     )
 }
 
+/**
+ * Componente del perfil de directivos.
+ */
 const DirectorProfile = ({ user }) => {
     return (
         <div>
@@ -28,6 +37,11 @@ const DirectorProfile = ({ user }) => {
 }
 
 const renderSwitch = (user) => {
+    /**
+     * Funcion que determina cual es el perfil que se debe renderizar con
+     * base en el rol del usuario. 1 para estudiantes, 2 para tutores y
+     * 3 para directivos.
+     */
     switch (user.role) {
         case 1:
             return (
@@ -45,6 +59,9 @@ const renderSwitch = (user) => {
 }
 
 const Profile = ({ user }) => {
+    /**
+     * Genera la pagina de perfil apropiada en funcion del rol del usuario.
+     */
     return (
         <div>
             {renderSwitch(user)}

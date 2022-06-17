@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 
 import App from './App'
 
@@ -80,8 +81,36 @@ let users = [
     id: 1,
     email: "daniel@mail.com",
     name: "Daniel Vela",
-    password: "velomeister",
+    password: "Abc123#",
     role: 1,
+    workshop: 1,
+    activityPlan: [
+      {
+        id: 1,
+        desc: 'Redactar marco teórico y cronograma',
+        report: 'Entregado',
+        grade: null
+      },
+      {
+        id: 2,
+        desc: 'Realizar encuestas',
+        report: null,
+        grade: null
+      },
+      {
+        id: 3,
+        desc: 'Redactar informe final',
+        report: null,
+        grade: null
+      }
+    ]
+  },
+  {
+    id: 2,
+    email: 'samuel@mail.com',
+    name: 'Samuel Rodríguez',
+    password: 'Abc123#',
+    role: 2,
     workshop: 1
   }
 ]

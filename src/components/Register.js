@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
 /**
  * Componente de la pagina de registro de la aplicacion.
@@ -32,8 +31,8 @@ const Register = ({ workshops, onRegister }) => {
             email: event.target.email.value,
             password: event.target.password.value,
             name: event.target.name.value,
-            role: event.target.role.value,
-            workshop: event.target.workshop.value
+            role: Number(event.target.role.value),
+            workshop: Number(event.target.workshop.value)
         }
         event.preventDefault()
         onRegister(user)

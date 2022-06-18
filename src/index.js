@@ -73,6 +73,24 @@ let workshops = [
     name: 'Human',
     objective: 'Lograr que la Gerencia Humanista transforme el entorno de las organizaciones en conjunto con la academia, a través de herramientas alternas que progresivamente mejoren todos los aspectos del hombre, concebido como un ser incompleto que necesita integrar sus ideales, conocimientos y capacidades que lo conduzcan a la felicidad plena y le permitan trascender en las dimensiones de la sociedad en general.',
     research_group: 10
+  },
+  {
+    id:4,
+    name: 'Gestión de Proyectos',
+    objective: 'Pone en marcha proyectos y procesos de investigación articulada, enfocados en la identificación y desarrollo de métodos, sistemas y procesos en el área de gerencia y control de proyectos; así como en la integración, entrenamiento y/o la aplicación de soluciones que mejoren el desempeño en las organizaciones actuales.',
+    research_group: 4
+  },
+  {
+    id: 5,
+    name: 'I+D Businness',
+    objective: 'Desarrollar Investigaciones que generen una nueva visión hacia el aprovechamiento del conocimiento de diferentes disciplinas, para crear oportunidades usando los negocios internacionales.',
+    research_group: 5
+  },
+  {
+    id: 6,
+    name: 'Gestión Ambiental',
+    objective: 'En este grupo se enmarcan proyectos y actividades de investigación que comprendan el desarrollo, adaptación e implementación de herramientas, metodologías, modelos y propuestas para el mejoramiento de procesos generando un impacto positivo en el desarrollo sostenible de la sociedad.',
+    research_group: 6
   }
 ]
 

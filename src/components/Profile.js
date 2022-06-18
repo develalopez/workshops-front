@@ -116,8 +116,14 @@ const TeacherProfile = ({ user, students, onGradeActivity }) => {
         const activityId = Number(event.target.activity.value)
         const studentId = Number(event.target.student.value)
         const newGrade = Number(event.target.grade.value)
-        event.preventDefault()
-        onGradeActivity(studentId, activityId, newGrade)
+        if (newGrade > 5) {
+            alert('Solo califica de 0 a 5')
+            event.preventDefault()
+        } else {
+
+            event.preventDefault()
+            onGradeActivity(studentId, activityId, newGrade)
+        }
     }
 
     return (
@@ -158,7 +164,7 @@ const TeacherProfile = ({ user, students, onGradeActivity }) => {
                     {
                         students.map(student => {
                             return (
-                                student.activityPlan.map(activity => 
+                                student.activityPlan.map(activity =>
                                     <tr key={"Actividad" + student.name + activity.id}>
                                         <td>{student.name}</td>
                                         <td>{activity.id}</td>

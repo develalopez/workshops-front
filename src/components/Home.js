@@ -3,8 +3,8 @@ import React from 'react'
 const Home = () => (
     <div>
         <h2>Semilleros EAN</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <img src="banner.jpg"></img>
+        <p>Los semilleros de investigación son espacios de colaboración diseñados para que los estudiantes de pregrado, con el acompañamiento de un tutor (profesor investigador), fortalezcan y desarrollen sus competencias investigativas por medio del desarrollo o la vinculación a un proyecto de investigación formal institucional o el estudio de una temática particular planteada por el estudiante o tutor. El resultado de este trabajo es un producto de investigación elaborado de forma autónoma por los estudiantes.</p>
+        <img src="banner.jpg" style={{width: "100%", height: "auto"}}></img>
     </div>
 )
 
